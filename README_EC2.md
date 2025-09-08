@@ -98,7 +98,8 @@ Repositório com **anotações, resumos e práticas** sobre gerenciamento de ins
 
 ---
 
-✨ **Autora :Luane Gonçalves Silva 
+✨ **Autora: Luane Gonçalves Silva 
+
 📌 Desafio 1 do Bootcamp **Santander CodeGirls - 2025**  
 
 ✍️ *Repositório em constante atualização conforme avanço nos estudos.*
