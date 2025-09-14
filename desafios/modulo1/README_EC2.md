@@ -77,7 +77,43 @@ Repositório com **anotações, resumos e práticas** sobre gerenciamento de ins
 3. Implementação de instâncias EC2 🖥️  
 4. Configuração de volumes EBS 💾 e buckets S3 📦  
 5. Testes de políticas de acesso e permissões 🔒  
-6. Documentação do processo neste repositório 📑  
+6. Documentação do processo neste repositório 📑
+7. Criação de um diagrama de arquitetura no Draw.io para representar a solução de computação em nuvem AWS.
+
+---
+
+### 🔹 Desafio 1: Diagrama de Arquitetura de vizualização de Interação entre Serviços AWS:
+📚 Cenário: Instituição de Ensino com Dados Acadêmicos
+Contexto
+A instituição precisa armazenar arquivos de alunos e professores (trabalhos, provas digitalizadas, planilhas de notas).
+Os alunos enviam seus arquivos via portal acadêmico.
+Esses arquivos são processados automaticamente (validação, categorização e backup).
+Professores e administradores podem acessar os dados já organizados.
+
+🏗️ Arquitetura Explicada
+
+1. Usuário (Aluno/Professor) 👩‍🎓👨‍🏫
+  Faz upload de um trabalho ou relatório no portal acadêmico (aplicação hospedada em EC2).
+2. Amazon S3 (Storage) 📦
+  Recebe os arquivos enviados e guarda de forma escalável.
+  Exemplo: s3://dados-academicos/universidade/alunos/2025/
+
+3. AWS Lambda (Processamento Serverless) ⚡
+  Disparada automaticamente quando um arquivo chega no S3.
+  Tarefas:
+    Validar o formato do arquivo (PDF, DOCX).
+    Gerar metadados (aluno, disciplina, semestre).
+    Criar uma versão compactada para economizar espaço.
+
+4. Amazon EC2 (Aplicação Acadêmica) 🖥️
+  Hospeda o sistema web acadêmico.
+  Professores acessam relatórios e notas.
+  Pode ser chamado pela Lambda quando o processamento for mais pesado (ex.: análises estatísticas sobre desempenho dos alunos).
+
+5. S3 (Dados organizados) 📦
+  Arquivos finais (validados e processados) ficam disponíveis para consulta pelo sistema.
+
+
 
 ## 📖 Glossário
 - **EC2** → Elastic Compute Cloud.  
