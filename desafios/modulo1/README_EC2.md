@@ -113,7 +113,10 @@ Professores e administradores podem acessar os dados já organizados.
 5. S3 (Dados organizados) 📦
   Arquivos finais (validados e processados) ficam disponíveis para consulta pelo sistema.
 
-[!(desafios/modulo1/aws_EC2_S3.drawio.png)]
+
+Abaixo Diagrama de Arquitetura de vizualização de Interação entre Serviços AWS:
+
+<img width="790" height="787" alt="Image" src="https://github.com/user-attachments/assets/029313a3-3271-46db-ae24-60fb4b5073b1" />
 
 ## 📖 Glossário
 - **EC2** → Elastic Compute Cloud.  
